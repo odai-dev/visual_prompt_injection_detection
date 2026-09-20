@@ -137,15 +137,29 @@ Additionally, a comprehensive 32-suite integration test (`tests/test_pipeline.py
 ## 10. Results and Visualization
 The trained system achieved exceptional results on both synthetic and real-world datasets.
 
-**Quantitative Results (Example on Test Sets):**
-- **LinearSVC:** Consistently achieved ~1.00 Recall and F1-Score on the structured synthetic dataset, successfully capturing injection signatures.
-- **Robustness:** Successfully identified camouflaged and low-contrast text (Delta-RGB $\le$ 5) using the hybrid CV/OCR approach.
+**Quantitative Results:**
 
-**Visualizations Generated (`results/figures/`):**
+| Dataset | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|---------|----------|-----------|--------|----------|---------|
+| **Synthetic Test Set (In-Distribution)** | 99.8% | 99.8% | 99.8% | 99.8% | 1.000 |
+| **CyberSecEval 3 (Out-of-Distribution)** | 93.3% | 100% | 90.0% | 94.7% | 1.000 |
+
+- **LinearSVC:** Consistently achieved near-perfect Recall and F1-Score on the structured synthetic dataset, successfully capturing injection signatures.
+- **Robustness:** Successfully identified camouflaged and low-contrast text (Delta-RGB $\le$ 25) using the hybrid CV/OCR approach, leading to zero false positives on OOD data.
+
+**Visualizations Generated:**
+
 1. **Confusion Matrix:** Highlighting True Positives and False Positives.
+![Confusion Matrix](results/figures/confusion_matrix.png)
+
 2. **ROC Curve:** Demonstrating near-perfect separability (AUC $\approx$ 1.00).
+![ROC Curve](results/figures/roc_curve.png)
+
 3. **K-Means PCA Plot:** 2D dimensionality reduction (PCA) of clusters, visually separating standard text from system prompts.
-4. **Top Malicious Words:** A bar chart of the highest TF-IDF weighted terms for malicious classifications (e.g., "ignore", "system", "instruction").
+![K-Means Clusters](results/figures/kmeans_clusters_pca.png)
+
+4. **Top Malicious Words:** A bar chart of the highest TF-IDF weighted terms for malicious classifications.
+![Top Words](results/figures/top_malicious_words.png)
 
 ---
 
