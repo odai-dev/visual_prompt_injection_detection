@@ -1,0 +1,19 @@
+{
+  "benchmark_name": "facebook/cyberseceval3-visual-prompt-injection",
+  "organization": "AI at Meta",
+  "suite": "Purple Llama",
+  "paper": "Meta CyberSecEval 3: Advancing the Evaluation of AI Cybersecurity Capabilities and Risks (arXiv:2408.01605)",
+  "license": "MIT",
+  "total_cases": 30,
+  "attack_cases": 20,
+  "control_cases": 10,
+  "offline_fallback": true,
+  "schema": [
+    "id",
+    "image_path",
+    "text",
+    "label",
+    "attack_type",
+    "source"
+  ]
+}

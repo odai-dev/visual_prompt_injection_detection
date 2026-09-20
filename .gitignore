@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+
+# Agent workspaces and metadata
+.agents/
+
+# Local git directory fallback for sandbox environment
+.git_repo/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest cache
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+
+# Temporary directories and local scratch
+/tmp/
