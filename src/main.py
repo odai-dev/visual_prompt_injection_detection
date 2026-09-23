@@ -11,7 +11,10 @@ Usage
 import argparse
 import logging
 import sys
+# Add project root to sys.path
 from pathlib import Path
+# Add project root to sys.path so "from src.X" works
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from rich.console import Console
 from rich.panel import Panel
